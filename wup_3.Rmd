@@ -1,7 +1,7 @@
 ---
 title: "Alcohol vs Seat choice"
-author: "Your Name"
-date: "Fall 2020"
+author: "Maria Cabanillas"
+date: "October 13, 2020 "
 output: html_document
 ---
 
@@ -18,7 +18,7 @@ davisdata <- read.csv(file="UCDavis.csv")
 ## you choose to sit in??
 
 ## Now with ggplot - first select the basic data
-
+ 
 ```{r}
 basicCN <- ggplot(davisdata,aes(y=alcohol,x=Seat))
 ```
@@ -36,7 +36,9 @@ basicCN + geom_boxplot(notch=TRUE,outlier.color = "red") + stat_boxplot(geom ='e
 ```
 
 ## Numerical Summarys 
-
+```{r}
+favstats(alcohol~Seat,data=davisdata)
+```
 ## Inferential Tests
 
 ## Conclusions
